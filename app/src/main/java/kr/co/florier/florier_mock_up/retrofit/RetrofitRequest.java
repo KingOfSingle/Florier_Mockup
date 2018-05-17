@@ -3,7 +3,7 @@ package kr.co.florier.florier_mock_up.retrofit;
 import java.util.ArrayList;
 
 
-import kr.co.florier.florier_mock_up.Bean.flower_test;
+import kr.co.florier.florier_mock_up.bean.flower_test;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;

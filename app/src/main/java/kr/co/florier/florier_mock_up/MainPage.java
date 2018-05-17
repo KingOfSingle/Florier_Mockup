@@ -3,22 +3,18 @@ package kr.co.florier.florier_mock_up;
 import android.app.Activity;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 import android.widget.ListView;
-import android.widget.ScrollView;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import kr.co.florier.florier_mock_up.Bean.Store;
+import kr.co.florier.florier_mock_up.bean.Store;
 import kr.co.florier.florier_mock_up.adapter.FlowerStoreListAdapter;
 
 public class MainPage extends Fragment {

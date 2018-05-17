@@ -7,14 +7,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import kr.co.florier.florier_mock_up.Bean.Store;
+import kr.co.florier.florier_mock_up.bean.Store;
 import kr.co.florier.florier_mock_up.adapter.FlowerStoreListAdapter;
 
 /**

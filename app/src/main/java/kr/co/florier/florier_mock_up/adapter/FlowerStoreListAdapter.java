@@ -1,6 +1,5 @@
 package kr.co.florier.florier_mock_up.adapter;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import kr.co.florier.florier_mock_up.Bean.Store;
+import kr.co.florier.florier_mock_up.bean.Store;
 import kr.co.florier.florier_mock_up.R;
 
 /**

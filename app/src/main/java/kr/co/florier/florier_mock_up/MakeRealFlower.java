@@ -8,13 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
-import android.widget.ImageView;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 
-import kr.co.florier.florier_mock_up.Bean.Flower;
+import kr.co.florier.florier_mock_up.bean.Flower;
 import kr.co.florier.florier_mock_up.adapter.FlowerListAdapter;
 
 /**

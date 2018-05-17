@@ -1,4 +1,4 @@
-package kr.co.florier.florier_mock_up.Bean;
+package kr.co.florier.florier_mock_up.bean;
 
 import android.support.v4.app.Fragment;
 

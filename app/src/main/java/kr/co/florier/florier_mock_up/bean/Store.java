@@ -1,10 +1,7 @@
-package kr.co.florier.florier_mock_up.Bean;
+package kr.co.florier.florier_mock_up.bean;
 
-import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import java.io.Serializable;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

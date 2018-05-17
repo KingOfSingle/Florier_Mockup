@@ -1,6 +1,5 @@
 package kr.co.florier.florier_mock_up;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +11,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import kr.co.florier.florier_mock_up.Bean.Flower;
+import kr.co.florier.florier_mock_up.bean.Flower;
 import kr.co.florier.florier_mock_up.adapter.FlowerListAdapter;
 
 

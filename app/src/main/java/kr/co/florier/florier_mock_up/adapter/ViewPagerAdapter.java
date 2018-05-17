@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 
-import kr.co.florier.florier_mock_up.Bean.Fragmentinfo;
+import kr.co.florier.florier_mock_up.bean.Fragmentinfo;
 
 
 /**
