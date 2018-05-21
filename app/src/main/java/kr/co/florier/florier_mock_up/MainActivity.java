@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(R.mipmap.ic_launcher, "Page1", new MakeDryFlower());
+        adapter.addFragment(R.mipmap.ic_launcher, "Page1", new MakeFlowerMain());
         adapter.addFragment(R.drawable.ic_launcher_background, "page2", new MainPage());
         /*adapter.addFragment(R.drawable.ic_launcher_background, "Page3", new OderPage());*/
         /*adapter.addFragment(R.drawable.ic_launcher_background, "Page4", new FlowerStore());*/
