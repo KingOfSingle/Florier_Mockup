@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -47,6 +48,9 @@ public class FlowerListAdapter extends BaseAdapter {
             holder.tx_flower_name = view.findViewById(R.id.tx_flower_name);
             holder.tx_flower_price =view.findViewById(R.id.tx_flower_price);
             holder.flower_img = view.findViewById(R.id.flower_img);
+            holder.tx_count = view.findViewById(R.id.tx_count);
+            holder.btn_up = view.findViewById(R.id.btn_up);
+            holder.btn_down = view.findViewById(R.id.btn_down);
 
             view.setTag(holder);
         } else{
@@ -58,6 +62,14 @@ public class FlowerListAdapter extends BaseAdapter {
         holder.tx_flower_price.setText(price);
         holder.flower_img.setBackgroundResource(R.drawable.ic_launcher_background);
 
+        final int count = 0;
+        holder.btn_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
         return view;
     }
 
@@ -65,6 +77,9 @@ public class FlowerListAdapter extends BaseAdapter {
         View flower_img;
         TextView tx_flower_name;
         TextView tx_flower_price;
+        Button btn_up;
+        Button btn_down;
+        Button tx_count;
     }
 
 }

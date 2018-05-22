@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
 import kr.co.florier.florier_mock_up.adapter.ViewPagerAdapter;
 /*import retrofit2.Call;
 import retrofit2.Callback;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(R.mipmap.ic_launcher, "Page1", new MakeFlowerMain());
-        adapter.addFragment(R.drawable.ic_launcher_background, "page2", new MainPage());
+        adapter.addFragment(R.drawable.ic_launcher_background, "page2", new OderPage());
         /*adapter.addFragment(R.drawable.ic_launcher_background, "Page3", new OderPage());*/
         /*adapter.addFragment(R.drawable.ic_launcher_background, "Page4", new FlowerStore());*/
         mViewPager.setAdapter(adapter);
