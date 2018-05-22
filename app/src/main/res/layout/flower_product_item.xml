@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/store_flower_img"
+            android:background="@mipmap/ic_launcher"
+            android:layout_width="130dp"
+            android:layout_height="150dp"/>
+        <TextView
+            android:id="@+id/store_flower_name"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="황혼의 들녘"
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/store_flower_price"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="25000원"/>
+    </LinearLayout>
+
+
+</LinearLayout>
