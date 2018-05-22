@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Flower_select"></activity>
+        <activity android:name=".Flower_select" />
+        <activity android:name=".MakeFlowerMenu"/>
     </application>
 
 </manifest>

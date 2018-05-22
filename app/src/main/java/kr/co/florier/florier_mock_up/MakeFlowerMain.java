@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatCallback;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +21,7 @@ public class MakeFlowerMain extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        ViewGroup rootview = (ViewGroup) inflater.inflate(R.layout.make_flower_main, container, false);
+        ViewGroup rootview = (ViewGroup) inflater.inflate(R.layout.activity_make_flower_main, container, false);
         Activity parentActivity = getActivity();
         ButterKnife.bind(this, rootview);
 
@@ -28,7 +29,8 @@ public class MakeFlowerMain extends Fragment {
     }
     @OnClick(R.id.start_flower)
     public void clickStart(View view) {
-        Intent intent = new Intent(getActivity(), MakeDryFlower.class);
-        startActivityForResult(intent, 5);
+        Intent intent = new Intent(getActivity(), MakeFlowerMenu.class);
+        getActivity().startActivityForResult(intent, 5);
     }
+
 }

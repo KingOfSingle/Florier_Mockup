@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -24,7 +25,7 @@ public class Flower_select extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.make_dry_flower);
+        setContentView(R.layout.flower_select);
         ButterKnife.bind(this);
 
         ArrayList<Flower> flower = new ArrayList<>();
@@ -44,9 +45,25 @@ public class Flower_select extends AppCompatActivity {
         flower_list.setAdapter(FlowerListadapter);
 
     }
+
+    /*@OnClick({R.id.btn_up, R.id.btn_down})
+    public void onClickCount(View v){
+        int count = 0;
+        switch (v.getId()){
+            case R.id.btn_up :
+                count++;
+                tx_count.setText(count);
+                break;
+            case R.id.btn_down :
+                count--;
+                tx_count.setText(count);
+                break;
+        }
+    }*/
+
     @OnClick(R.id.btn_ok)
     public void clickOk(View view) {
-        /*Intent intent = new Intent(Flower_select.this,MakeDryFlower.class);
+        /*Intent intent = new Intent(Flower_select.this,MakeFlowerMenu.class);
         startActivityForResult(intent, 0);*/
         finish();
 

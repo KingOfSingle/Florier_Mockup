@@ -12,7 +12,7 @@ import butterknife.OnClick;
  * Created by Administrator on 2018-03-14.
  */
 
-public class MakeDryFlower extends AppCompatActivity {
+public class MakeFlowerMenu extends AppCompatActivity {
 
     @BindView(R.id.form_btn)
     Button form_btn;
@@ -32,25 +32,25 @@ public class MakeDryFlower extends AppCompatActivity {
     }
     @OnClick(R.id.form_btn)
     public void clickForm(View view) {
-        Intent intent = new Intent(MakeDryFlower.this, Flower_select.class);
+        Intent intent = new Intent(MakeFlowerMenu.this, Flower_select.class);
         startActivityForResult(intent, 0);
 
     }
     @OnClick(R.id.mass_btn)
     public void clickMass(View view) {
-        Intent intent = new Intent(MakeDryFlower.this,Flower_select.class);
+        Intent intent = new Intent(MakeFlowerMenu.this,Flower_select.class);
         startActivityForResult(intent, 1);
 
     }
     @OnClick(R.id.line_btn)
     public void clickLine(View view) {
-        Intent intent = new Intent(MakeDryFlower.this,Flower_select.class);
+        Intent intent = new Intent(MakeFlowerMenu.this,Flower_select.class);
         startActivityForResult(intent, 2);
 
     }
     @OnClick(R.id.fill_btn)
     public void clickFill(View view) {
-        Intent intent = new Intent(MakeDryFlower.this,Flower_select.class);
+        Intent intent = new Intent(MakeFlowerMenu.this,Flower_select.class);
         startActivityForResult(intent, 3);
 
     }
