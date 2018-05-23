@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="메스플라워"
-        android:layout_alignTop="@id/select_item"
+        android:layout_marginTop="50dp"
         />
 
     <RelativeLayout
@@ -25,13 +25,18 @@
                 android:numColumns="2">
             </GridView>
     </RelativeLayout>
-
+    <TextView
+        android:id="@+id/tx_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="목록"
+        android:layout_below="@+id/select_item"/>
     <ListView
         android:id="@+id/select_list"
         android:layout_margin="20dp"
         android:layout_width="wrap_content"
         android:layout_height="120dp"
-        android:layout_below="@+id/select_item"
+        android:layout_below="@+id/tx_content"
         >
     </ListView>
 

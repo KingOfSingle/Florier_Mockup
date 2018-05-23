@@ -40,12 +40,18 @@ public class Flower_select extends AppCompatActivity {
         setContentView(R.layout.flower_select);
         ButterKnife.bind(this);
 
-        Flower flower1 = new Flower(0,0,"장미",25000,"www.naver.com");
-        Flower flower2 = new Flower(1,0,"수국",35000,"www.naver.com");
-        Flower flower3 = new Flower(2,1,"튤립",65000,"www.naver.com");
-        Flower flower4 = new Flower(3,2,"오드",75000,"www.naver.com");
-        Flower flower5 = new Flower(4,3,"해바라기",15000,"www.naver.com");
-        Flower flower6 = new Flower(5,2,"백합",15000,"www.naver.com");
+        Flower flower1 = new Flower(0,0,"장미1",25000,"www.naver.com");
+        Flower flower2 = new Flower(1,0,"장미2",35000,"www.naver.com");
+        Flower flower3 = new Flower(2,0,"장미3",65000,"www.naver.com");
+        Flower flower4 = new Flower(3,0,"장미4",75000,"www.naver.com");
+        Flower flower5 = new Flower(4,0,"장미5",15000,"www.naver.com");
+        Flower flower6 = new Flower(5,1,"수국",15000,"www.naver.com");
+        Flower flower7 = new Flower(6,1,"카네이션",15000,"www.naver.com");
+        Flower flower8 = new Flower(7,1,"작약",15000,"www.naver.com");
+        Flower flower9 = new Flower(8,2,"유칼립스",15000,"www.naver.com");
+        Flower flower10 = new Flower(9,3,"idon",15000,"www.naver.com");
+        Flower flower11 = new Flower(10,3,"안개꽃",15000,"www.naver.com");
+
 
         flowers.add(flower1);
         flowers.add(flower2);
@@ -53,6 +59,11 @@ public class Flower_select extends AppCompatActivity {
         flowers.add(flower4);
         flowers.add(flower5);
         flowers.add(flower6);
+        flowers.add(flower7);
+        flowers.add(flower8);
+        flowers.add(flower9);
+        flowers.add(flower10);
+        flowers.add(flower11);
 
         Intent intent = getIntent();
         Integer flowerType = intent.getIntExtra("flowerType", 0);

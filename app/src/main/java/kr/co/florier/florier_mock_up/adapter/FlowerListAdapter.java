@@ -59,7 +59,29 @@ public class FlowerListAdapter extends BaseAdapter {
         String price = String.valueOf(item.getFlower_price());
         holder.tx_flower_name.setText(item.getFlower_name());
         holder.tx_flower_price.setText(price);
-        holder.flower_img.setBackgroundResource(R.drawable.ic_launcher_background);
+        if(item.getFlower_id()==0) {
+            holder.flower_img.setBackgroundResource(R.drawable.rose_mess);
+        }else if(item.getFlower_id()==1){
+            holder.flower_img.setBackgroundResource(R.drawable.rose2_mess);
+        }else if(item.getFlower_id()==2){
+            holder.flower_img.setBackgroundResource(R.drawable.rose3_mess);
+        }else if(item.getFlower_id()==3){
+            holder.flower_img.setBackgroundResource(R.drawable.rose4_mess);
+        }else if(item.getFlower_id()==4){
+            holder.flower_img.setBackgroundResource(R.drawable.rose5_mess);
+        }else if(item.getFlower_id()==5){
+            holder.flower_img.setBackgroundResource(R.drawable.sugok);
+        }else if(item.getFlower_id()==6){
+            holder.flower_img.setBackgroundResource(R.drawable.cane_mess);
+        }else if(item.getFlower_id()==7){
+            holder.flower_img.setBackgroundResource(R.drawable.jak_mess);
+        }else if(item.getFlower_id()==8){
+            holder.flower_img.setBackgroundResource(R.drawable.ucalips_piller);
+        }else if(item.getFlower_id()==9){
+            holder.flower_img.setBackgroundResource(R.drawable.idon_piller);
+        }else if(item.getFlower_id()==10){
+            holder.flower_img.setBackgroundResource(R.drawable.mist_piller);
+        }
 
         return view;
     }
