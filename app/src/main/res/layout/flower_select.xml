@@ -4,160 +4,20 @@
     android:layout_height="match_parent"
     android:background="@drawable/back">
 
-    <View
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="#999"
-        />
-
     <LinearLayout
         android:layout_marginLeft="190dp"
         android:layout_marginTop="70dp"
         android:layout_width="180dp"
         android:layout_height="100dp">
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:stretchColumns="*">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#999"
-                    android:gravity="center"
-                    android:text="rank"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#999"
-                    android:gravity="center"
-                    android:text="종류"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#816"
-                    android:gravity="center"
-                    android:text="송이"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#9076"
-                    android:gravity="center"
-                    android:text="가격"/>
-            </TableRow>
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#999"
-                    android:gravity="center"
-                    android:text="rank"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#999"
-                    android:gravity="center"
-                    android:text="rank"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#816"
-                    android:gravity="center"
-                    android:text="rank"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#9076"
-                    android:gravity="center"
-                    android:text="rank"/>
-            </TableRow>
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#999"
-                    android:gravity="center"
-                    android:text="rank"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#999"
-                    android:gravity="center"
-                    android:text="rank"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#816"
-                    android:gravity="center"
-                    android:text="rank"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#9076"
-                    android:gravity="center"
-                    android:text="rank"/>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#999"
-                    android:gravity="center"
-                    android:text="rank"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#999"
-                    android:gravity="center"
-                    android:text="rank"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#816"
-                    android:gravity="center"
-                    android:text="rank"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#9076"
-                    android:gravity="center"
-                    android:text="rank"/>
-            </TableRow>
-
-        </TableLayout>
     </LinearLayout>
 
     <RelativeLayout
+        android:id="@+id/select_item"
         android:layout_width="350dp"
         android:layout_height="300dp"
-        android:layout_marginTop="205dp"
+        android:layout_marginTop="70dp"
         android:layout_centerHorizontal="true">
-
             <GridView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -166,6 +26,15 @@
             </GridView>
     </RelativeLayout>
 
+    <ListView
+        android:id="@+id/select_list"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_below="@+id/select_item"
+        >
+    </ListView>
+
     <Button
         android:id="@+id/btn_ok"
         android:layout_width="wrap_content"
@@ -173,5 +42,5 @@
         android:layout_marginBottom="15dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/btn_ok" />
+        />
 </RelativeLayout>
