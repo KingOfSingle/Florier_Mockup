@@ -35,10 +35,6 @@ public class Flower_select extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.flower_select);
         ButterKnife.bind(this);
-        Holder holder = new Holder();
-        holder.tx_count = findViewById(R.id.tx_count);
-        holder.btn_up = findViewById(R.id.btn_up);
-        holder.btn_down = findViewById(R.id.btn_down);
 
         Flower flower1 = new Flower(0,0,"장미",25000,"www.naver.com",0);
         Flower flower2 = new Flower(1,0,"수국",35000,"www.naver.com",0);
@@ -60,47 +56,17 @@ public class Flower_select extends AppCompatActivity {
         Log.d("flowerType", "flwoerType: " +flowerType);
         checkFlowerType(flowerType);
 
-        final FlowerListAdapter FlowerListadapter = new FlowerListAdapter(flowers2);
-        flower_list.setAdapter(FlowerListadapter);
-
-        flower_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                int count, checked ;
-                count = FlowerListadapter.getCount() ;
-
-                if (count > 0) {
-                    // 현재 선택된 아이템의 position 획득.
-                    checked = flower_list.getCheckedItemPosition();
-                    if (checked > -1 && checked < count) {
-                        // 아이템 수정
-                        FlowerListadapter.countUp();
-
-                        // listview 갱신
-                        FlowerListadapter.notifyDataSetChanged();
-                    }
-                }
-
-            }
-        });
-
-        FlowerListadapter.notifyDataSetChanged();
-
     }
 
-//    @OnItemClick({R.id.btn_up, R.id.btn_down})
-//    public void onClickCount(int i){
-//        Holder holder = new Holder();
-//        int count = 0;
-//        int a = 0;
-//        if(a==0) {
-//            count++;
-//            holder.tx_count.setText(count);
-//        }else {
-//            count--;
-//            holder.tx_count.setText(count);
-//        }
-//    }
+    @OnItemClick(R.id.select_item)
+    public void onItemClick(View v, int i){
+        int count = 0;
+        count++;
+        Intent intent = getIntent();
+        intent.putExtra("flowerName", flowers2.get(i).getFlower_name());
+        intent.putExtra("flowerCount", count);
+        intent.putExtra("flowerPrice", flowers2.get(i).getFlower_price());
+    }
 
     @OnClick(R.id.btn_ok)
     public void clickOk(View view) {
@@ -146,10 +112,5 @@ public class Flower_select extends AppCompatActivity {
         }
         FlowerListAdapter FlowerListadapter = new FlowerListAdapter(flowers2);
         flower_list.setAdapter(FlowerListadapter);
-    }
-    private class Holder{
-        Button btn_up;
-        Button btn_down;
-        TextView tx_count;
     }
 }

@@ -11,7 +11,7 @@
             android:layout_marginTop="10dp"
             android:layout_width="100dp"
             android:layout_height="120dp"/>
-        <LinearLayout
+       <!-- <LinearLayout
             android:id="@+id/select_info"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
@@ -67,6 +67,6 @@
             android:layout_below="@+id/select_info"
             android:layout_toLeftOf="@+id/btn_input"
             android:layout_alignBaseline="@+id/btn_input"
-            />
+            />-->
     </RelativeLayout>
 </LinearLayout>
