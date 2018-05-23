@@ -11,7 +11,7 @@
             android:layout_marginTop="10dp"
             android:layout_width="100dp"
             android:layout_height="120dp"/>
-       <!-- <LinearLayout
+        <LinearLayout
             android:id="@+id/select_info"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
@@ -26,13 +26,13 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <Button
+                <!--<Button
                     android:id="@+id/btn_up"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:text="up"
                     android:layout_weight="1"
-                    />
+                    />-->
                 <TextView
                     android:id="@+id/tx_count"
                     android:layout_width="wrap_content"
@@ -41,23 +41,23 @@
                     android:text="0"
                     android:textSize="20dp"
                     />
-                <Button
+                <!--<Button
                     android:id="@+id/btn_down"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:text="down"
                     android:layout_weight="1"
-                    />
+                    />-->
             </LinearLayout>
         </LinearLayout>
-        <Button
+        <!--<Button
             android:id="@+id/btn_input"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:text="입력"
             android:layout_below="@+id/select_info"
             android:layout_alignRight="@+id/select_info"
-            />
+            />-->
         <TextView
             android:id="@+id/tx_flower_price"
             android:layout_width="wrap_content"
@@ -65,8 +65,6 @@
             android:textSize="15dp"
             android:hint="가격"
             android:layout_below="@+id/select_info"
-            android:layout_toLeftOf="@+id/btn_input"
-            android:layout_alignBaseline="@+id/btn_input"
-            />-->
+            />
     </RelativeLayout>
 </LinearLayout>

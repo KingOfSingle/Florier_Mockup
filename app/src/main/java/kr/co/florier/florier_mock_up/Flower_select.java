@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnItemClick;
+import kr.co.florier.florier_mock_up.adapter.Flower_select_list_item;
 import kr.co.florier.florier_mock_up.bean.Flower;
 import kr.co.florier.florier_mock_up.adapter.FlowerListAdapter;
 
@@ -27,6 +29,8 @@ public class Flower_select extends AppCompatActivity {
 
     @BindView(R.id.flower_list)
     GridView flower_list;
+    @BindView(R.id.select_list)
+    ListView select_list;
     @BindView(R.id.btn_ok)
     Button btn_ok;
 
@@ -58,14 +62,17 @@ public class Flower_select extends AppCompatActivity {
 
     }
 
-    @OnItemClick(R.id.select_item)
+    int count = 0;
+    @OnItemClick(R.id.flower_list)
     public void onItemClick(View v, int i){
-        int count = 0;
         count++;
-        Intent intent = getIntent();
-        intent.putExtra("flowerName", flowers2.get(i).getFlower_name());
-        intent.putExtra("flowerCount", count);
-        intent.putExtra("flowerPrice", flowers2.get(i).getFlower_price());
+        Flower item = flowers2.get(i);
+        Intent intent = new Intent(Flower_select.this, Flower_select_list_item.class);
+        intent.putExtra("flowerName", item.getFlower_name());
+        intent.putExtra("count", count);
+        intent.putExtra("flowerPrice", item.getFlower_price());
+        Flower_select_list_item flowerSelectListItem = new Flower_select_list_item(flowers2, Flower_select.this);
+        select_list.setAdapter(flowerSelectListItem);
     }
 
     @OnClick(R.id.btn_ok)

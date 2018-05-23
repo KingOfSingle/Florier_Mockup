@@ -50,9 +50,7 @@ public class FlowerListAdapter extends BaseAdapter {
             holder.tx_flower_name = view.findViewById(R.id.tx_flower_name);
             holder.tx_flower_price =view.findViewById(R.id.tx_flower_price);
             holder.flower_img = view.findViewById(R.id.flower_img);
-            /*holder.tx_count = view.findViewById(R.id.tx_count);
-            holder.btn_up = view.findViewById(R.id.btn_up);
-            holder.btn_down = view.findViewById(R.id.btn_down);*/
+
 
             view.setTag(holder);
         } else{
@@ -71,9 +69,6 @@ public class FlowerListAdapter extends BaseAdapter {
         View flower_img;
         TextView tx_flower_name;
         TextView tx_flower_price;
-        /*Button btn_up;
-        Button btn_down;
-        TextView tx_count;*/
     }
 
 }
