@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/back">
 
     <View
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="#999"
@@ -153,8 +154,8 @@
 
     <RelativeLayout
         android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:layout_marginTop="180dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="205dp"
         android:layout_centerHorizontal="true">
 
             <GridView
@@ -167,9 +168,10 @@
 
     <Button
         android:id="@+id/btn_ok"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
         android:layout_alignParentBottom="true"
-        android:text="확인"
-        />
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_ok" />
 </RelativeLayout>

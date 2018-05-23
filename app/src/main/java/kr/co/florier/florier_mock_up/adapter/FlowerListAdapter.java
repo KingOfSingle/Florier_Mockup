@@ -79,7 +79,7 @@ public class FlowerListAdapter extends BaseAdapter {
         TextView tx_flower_price;
         Button btn_up;
         Button btn_down;
-        Button tx_count;
+        TextView tx_count;
     }
 
 }

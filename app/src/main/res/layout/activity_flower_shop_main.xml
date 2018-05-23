@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Flower_shop_main">
+    tools:context=".Flower_shop_main"
+    android:background="@drawable/back">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginTop="45dp"
+        android:id="@+id/top">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp"
@@ -43,7 +45,7 @@
     <GridView
         android:numColumns="3"
         android:id="@+id/grid_store"
-        android:layout_marginTop="350dp"
+        android:layout_below="@+id/top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </GridView>
