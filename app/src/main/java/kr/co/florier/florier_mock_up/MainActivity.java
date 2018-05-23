@@ -18,7 +18,7 @@ import retrofit2.Callback;
 import retrofit2.Response;*/
 
 public class MainActivity extends AppCompatActivity {
-    @BindView(R.id.btn_dra)Button btn_dra;
+
     @BindView(R.id.drawer)LinearLayout drawer;
     @BindView(R.id.drawer_layout)DrawerLayout drawer_layout;
     TabLayout mTabLayout;
@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(R.mipmap.ic_launcher, "Page1", new MakeFlowerMain());
-        adapter.addFragment(R.drawable.ic_launcher_background, "page2", new OderPage());
+        adapter.addFragment(R.drawable.home, "HOME", new MakeFlowerMain());
+        adapter.addFragment(R.drawable.locate, "SHOP", new OderPage());
         /*adapter.addFragment(R.drawable.ic_launcher_background, "Page3", new OderPage());*/
         /*adapter.addFragment(R.drawable.ic_launcher_background, "Page4", new FlowerStore());*/
         mViewPager.setAdapter(adapter);
@@ -64,11 +64,5 @@ public class MainActivity extends AppCompatActivity {
             mTabLayout.getTabAt(i).setIcon(adapter.getFragmentInfo(i).getIconid());
         }
 
-        btn_dra.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawer_layout.openDrawer(drawer);
-            }
-        });
     }
 }
