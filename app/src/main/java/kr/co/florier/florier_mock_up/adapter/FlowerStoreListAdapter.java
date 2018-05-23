@@ -50,7 +50,6 @@ public class FlowerStoreListAdapter extends BaseAdapter {
             holder.tx_flower_store_address =view.findViewById(R.id.tx_flower_store_address);
             holder.tx_flower_store_phone=view.findViewById(R.id.tx_flower_store_phone);
             holder.flower_store_img = view.findViewById(R.id.flower_store_img);
-            holder.btn_flower_store_plus=view.findViewById(R.id.btn_flower_store_plus);
 
             view.setTag(holder);
         } else{
@@ -69,7 +68,6 @@ public class FlowerStoreListAdapter extends BaseAdapter {
         TextView tx_flower_store_name;
         TextView tx_flower_store_phone;
         TextView tx_flower_store_address;
-        Button btn_flower_store_plus;
     }
 
 }

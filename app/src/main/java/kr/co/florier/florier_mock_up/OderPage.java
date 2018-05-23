@@ -22,6 +22,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnItemClick;
 import butterknife.OnItemSelected;
 import kr.co.florier.florier_mock_up.adapter.FlowerStoreListAdapter;
 import kr.co.florier.florier_mock_up.bean.Store;
@@ -58,7 +59,7 @@ public class OderPage extends Fragment {
         Activity parentActivity = getActivity();
 
         ButterKnife.bind(this,rootview);
-
+        Log.d("jp","클릭11");
        /* price.add("1000");
         price.add("2000");
         price.add("3000");*/
@@ -105,6 +106,7 @@ public class OderPage extends Fragment {
     public void onPriceSelected(View v, int i){
         Toast.makeText(getActivity(),"선택된 아이템 : "+ oder_page_price.getItemAtPosition(i), Toast.LENGTH_SHORT).show();
     }*/
+
 
     /*온셀렉트 아이템을 통해서 도시 선택시 해당 지역만 지역스피너 목록에 add*/
     @OnItemSelected(R.id.oder_page_city)
@@ -188,4 +190,15 @@ public class OderPage extends Fragment {
           Log.d("bundle", "bundle: " +bundle);
         }
     }
+
+    @OnItemClick(R.id.list_store)
+    public void onitmeclicklisner(View v, int i){
+        Log.d("jp","클릭2");
+        Intent intent = new Intent(getActivity(),Flower_shop_main.class);
+        Store item = stores.get(i);
+        intent.putExtra("pos",item.getFlower_store_id());
+        startActivity(intent);
+    }
+
+
 }
