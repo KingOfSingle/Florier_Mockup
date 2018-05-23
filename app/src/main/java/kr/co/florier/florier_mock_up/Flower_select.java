@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -90,8 +91,8 @@ public class Flower_select extends AppCompatActivity {
     public void clickOk(View view) {
         /*Intent intent = new Intent(Flower_select.this,MakeFlowerMenu.class);
         startActivityForResult(intent, 0);*/
+        Toast.makeText(Flower_select.this,"주문이 완료 되었습니다!" , Toast.LENGTH_LONG).show();
         finish();
-
     }
 
     // 타입에 따른 꽃 분류
