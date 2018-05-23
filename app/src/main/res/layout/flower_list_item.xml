@@ -19,11 +19,8 @@
             >
             <TextView
                 android:id="@+id/tx_flower_name"
-                android:layout_marginLeft="5dp"
-                android:layout_marginBottom="30dp"
-                android:layout_alignParentBottom="true"
-                android:layout_width="40dp"
-                android:layout_height="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="꽃이름"/>
             <LinearLayout
@@ -31,31 +28,25 @@
                 android:layout_height="wrap_content">
                 <Button
                     android:id="@+id/btn_up"
-                    android:layout_width="35dp"
-                    android:layout_height="20dp"
-                    android:layout_centerHorizontal="true"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
                     android:text="up"
-                    android:layout_toRightOf="@+id/tx_count"
-                    android:layout_below="@id/flower_img"
+                    android:layout_weight="1"
                     />
                 <TextView
                     android:id="@+id/tx_count"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_toRightOf="@+id/tx_flower_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:hint="0"
-                    android:layout_below="@id/flower_img"
+                    android:text="0"
+                    android:textSize="20dp"
                     />
                 <Button
                     android:id="@+id/btn_down"
-                    android:layout_width="35dp"
-                    android:layout_height="20dp"
-                    android:layout_centerHorizontal="true"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
                     android:text="down"
-                    android:layout_toLeftOf="@+id/tx_count"
-                    android:layout_below="@id/flower_img"
+                    android:layout_weight="1"
                     />
             </LinearLayout>
         </LinearLayout>

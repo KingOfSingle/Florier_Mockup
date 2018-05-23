@@ -3,14 +3,18 @@ package kr.co.florier.florier_mock_up;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import kr.co.florier.florier_mock_up.adapter.OrderListAdapter;
 import kr.co.florier.florier_mock_up.bean.Flower;
 
 /**
@@ -21,15 +25,21 @@ public class MakeFlowerMenu extends AppCompatActivity {
 
     ArrayList<Integer> flowersType = new ArrayList<>();
 
-    @BindView(R.id.form_btn)
-    Button form_btn;
-    @BindView(R.id.line_btn)
-    Button line_btn;
-    @BindView(R.id.fill_btn)
-    Button fill_btn;
-    @BindView(R.id.mass_btn)
-    Button mass_btn;
+    @BindView(R.id.form_btn) Button form_btn;
+    @BindView(R.id.line_btn) Button line_btn;
+    @BindView(R.id.fill_btn) Button fill_btn;
+    @BindView(R.id.mass_btn) Button mass_btn;
+    @BindView(R.id.text_form) TextView text_form;
+    @BindView(R.id.text_line) TextView text_line;
+    @BindView(R.id.text_fill) TextView text_fill;
+    @BindView(R.id.text_mass) TextView text_mass;
+    @BindView(R.id.list_form) ListView list_form;
+    @BindView(R.id.list_line) ListView list_line;
+    @BindView(R.id.list_fill) ListView list_fill;
+    @BindView(R.id.list_mass) ListView list_mass;
 
+    OrderListAdapter orderListAdapter;
+    int a = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +51,11 @@ public class MakeFlowerMenu extends AppCompatActivity {
         flowersType.add(2); // 라인플라워
         flowersType.add(3); // 필플라워
 
+        list_form.setAdapter(orderListAdapter);
+        list_line.setAdapter(orderListAdapter);
+        list_fill.setAdapter(orderListAdapter);
+        list_mass.setAdapter(orderListAdapter);
+
     }
 
     @OnClick(R.id.form_btn)
@@ -49,29 +64,32 @@ public class MakeFlowerMenu extends AppCompatActivity {
         // intent로 폼플라워인지 메스플라워인지 타입값을 넘긴다.
         intent.putExtra("flowerType", 0);
         startActivityForResult(intent, 0);
-
+        a = 1;
+        visibleGone();
     }
     @OnClick(R.id.mass_btn)
     public void clickMass(View view) {
         Intent intent = new Intent(MakeFlowerMenu.this,Flower_select.class);
         intent.putExtra("flowerType", 1);
         startActivityForResult(intent, 1);
-
+        a = 2;
+        visibleGone();
     }
     @OnClick(R.id.line_btn)
     public void clickLine(View view) {
         Intent intent = new Intent(MakeFlowerMenu.this,Flower_select.class);
-
         intent.putExtra("flowerType", 2);
         startActivityForResult(intent, 2);
-
+        a = 3;
+        visibleGone();
     }
     @OnClick(R.id.fill_btn)
     public void clickFill(View view) {
         Intent intent = new Intent(MakeFlowerMenu.this,Flower_select.class);
         intent.putExtra("flowerType", 3);
         startActivityForResult(intent, 3);
-
+        a = 4;
+        visibleGone();
     }
 //
 //    @Override
@@ -96,5 +114,16 @@ public class MakeFlowerMenu extends AppCompatActivity {
 //            }
 //        }
 //    }
-
+    //설명 visibility = GONE 함수
+    public void visibleGone(){
+        if(a == 1){
+            text_form.setVisibility(View.GONE);
+        }else if(a == 2){
+            text_mass.setVisibility(View.GONE);
+        }else if(a == 3) {
+            text_line.setVisibility(View.GONE);
+        }else if(a == 4){
+            text_fill.setVisibility(View.GONE);
+        }
+    }
 }
