@@ -16,6 +16,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import kr.co.florier.florier_mock_up.adapter.OrderListAdapter;
 import kr.co.florier.florier_mock_up.bean.Flower;
+import kr.co.florier.florier_mock_up.bean.Order_flower;
 
 /**
  * Created by Administrator on 2018-03-14.
@@ -24,7 +25,7 @@ import kr.co.florier.florier_mock_up.bean.Flower;
 public class MakeFlowerMenu extends AppCompatActivity {
 
     ArrayList<Integer> flowersType = new ArrayList<>();
-
+    ArrayList<Order_flower> items = new ArrayList<>();
     @BindView(R.id.form_btn) Button form_btn;
     @BindView(R.id.line_btn) Button line_btn;
     @BindView(R.id.fill_btn) Button fill_btn;
@@ -91,29 +92,46 @@ public class MakeFlowerMenu extends AppCompatActivity {
         a = 4;
         visibleGone();
     }
-//
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if(requestCode==0){
-//            if(resultCode==RESULT_OK){
-//                // 선택한 폼플라워 리스트
-//            }
-//        } else if(requestCode==1){
-//            if(resultCode==RESULT_OK){
-//                // 선택한 메스플라워 리스트
-//            }
-//        } else if(requestCode==2){
-//            if(resultCode==RESULT_OK){
-//                // 선택한 라인플라워 리스트
-//            }
-//        } else if(requestCode==0){
-//            if(resultCode==RESULT_OK){
-//                // 선택한 필러플라워 리스트
-//            }
-//        }
-//    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode==0){
+            if(resultCode==RESULT_OK){
+                // 선택한 폼플라워 리스트
+                String name = data.getStringExtra("name");
+                Integer price = data.getIntExtra("price", 0);
+                Integer count = data.getIntExtra("count", 0);
+
+                Order_flower order_flower = new Order_flower(name,price,count);
+                items.add(order_flower);
+                list_form.setAdapter(orderListAdapter);
+                orderListAdapter.notifyDataSetChanged();
+            }
+        } else if(requestCode==1){
+            if(resultCode==RESULT_OK){
+                // 선택한 메스플라워 리스트
+                String name = data.getStringExtra("name");
+                Integer price = data.getIntExtra("price", 0);
+                Integer count = data.getIntExtra("count", 0);
+            }
+        } else if(requestCode==2){
+            if(resultCode==RESULT_OK){
+                // 선택한 라인플라워 리스트
+                String name = data.getStringExtra("name");
+                Integer price = data.getIntExtra("price", 0);
+                Integer count = data.getIntExtra("count", 0);
+            }
+        } else if(requestCode==0){
+            if(resultCode==RESULT_OK){
+                // 선택한 필러플라워 리스트
+                String name = data.getStringExtra("name");
+                Integer price = data.getIntExtra("price", 0);
+                Integer count = data.getIntExtra("count", 0);
+            }
+        }
+    }
     //설명 visibility = GONE 함수
     public void visibleGone(){
         if(a == 1){

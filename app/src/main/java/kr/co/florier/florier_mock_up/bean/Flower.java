@@ -16,5 +16,4 @@ public class Flower {
     private String flower_name;
     private int flower_price;
     private String flower_img;
-    private int count;// 누름 = 1  , 안누름 = 0
 }

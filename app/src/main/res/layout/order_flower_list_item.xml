@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/flower_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="폼 플라워"
+        android:layout_margin="5dp"/>
+    <TextView
+        android:id="@+id/flower_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="송이"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:id="@+id/flower_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4000"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="원"
+        android:layout_marginTop="5dp"
+        />
+</LinearLayout>

@@ -40,12 +40,12 @@ public class Flower_select extends AppCompatActivity {
         setContentView(R.layout.flower_select);
         ButterKnife.bind(this);
 
-        Flower flower1 = new Flower(0,0,"장미",25000,"www.naver.com",0);
-        Flower flower2 = new Flower(1,0,"수국",35000,"www.naver.com",0);
-        Flower flower3 = new Flower(2,1,"튤립",65000,"www.naver.com",0);
-        Flower flower4 = new Flower(3,2,"오드",75000,"www.naver.com",0);
-        Flower flower5 = new Flower(4,3,"해바라기",15000,"www.naver.com",0);
-        Flower flower6 = new Flower(5,2,"백합",15000,"www.naver.com",0);
+        Flower flower1 = new Flower(0,0,"장미",25000,"www.naver.com");
+        Flower flower2 = new Flower(1,0,"수국",35000,"www.naver.com");
+        Flower flower3 = new Flower(2,1,"튤립",65000,"www.naver.com");
+        Flower flower4 = new Flower(3,2,"오드",75000,"www.naver.com");
+        Flower flower5 = new Flower(4,3,"해바라기",15000,"www.naver.com");
+        Flower flower6 = new Flower(5,2,"백합",15000,"www.naver.com");
 
         flowers.add(flower1);
         flowers.add(flower2);
