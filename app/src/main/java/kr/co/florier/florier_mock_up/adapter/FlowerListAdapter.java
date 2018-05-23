@@ -51,7 +51,6 @@ public class FlowerListAdapter extends BaseAdapter {
             holder.tx_flower_price =view.findViewById(R.id.tx_flower_price);
             holder.flower_img = view.findViewById(R.id.flower_img);
 
-
             view.setTag(holder);
         } else{
             holder = (FlowerListAdapter.Holder)view.getTag();

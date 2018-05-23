@@ -56,6 +56,7 @@ public class Flower_select_list_item extends BaseAdapter {
 
         Flower item = (Flower) getItem(i);
 
+        // Intent이용해서 클릭한 꽃 정보 받는 부분
         Intent intent = ((Activity) context).getIntent();
         String name = intent.getStringExtra("flowerName");
         Integer count = intent.getIntExtra("count", 0);

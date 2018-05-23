@@ -83,6 +83,7 @@ public class Flower_select extends AppCompatActivity {
 
     }
 
+    // 타입에 따른 꽃 분류
     public void checkFlowerType(int flowerType){
         if(flowerType == 0) {
             flowers2.clear();
