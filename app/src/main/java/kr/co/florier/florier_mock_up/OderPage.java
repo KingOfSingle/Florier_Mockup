@@ -77,7 +77,7 @@ public class OderPage extends Fragment {
         oder_page_city.setAdapter(spinnerCity);
 
         /*테스트용 꽃집 입력*/
-        Store store1 = new Store(0,"데이데이플라워","서울시","강서구", 37.5558818, 126.8606436,"www.naver.com","0105040304","서울시 강서구 등촌3동");
+        Store store1 = new Store(0,"한양플라워","서울시","성동구", 37.5558818, 126.8606436,"www.naver.com","02-2281-3003","서울 성동구 왕십리로 220");
         Store store2 = new Store(1,"밝은빛꽃","충청남도","보령시",36.3525227, 126.5987928, "www.naver.com","0105040304","충청남도 보령시 죽정동");
         Store store3 = new Store(2,"예그리나","서울시","강서구",37.5574591, 126.8558204, "www.naver.com","0105040304","서울시 강서구 염창동");
         Store store4 = new Store(3,"스윗스멜링","서울시","강남구",37.4978372, 127.0419858, "www.naver.com","0105040304","서울시 강남구 역삼2동");
@@ -114,7 +114,7 @@ public class OderPage extends Fragment {
         /*Toast.makeText(getActivity(), "선택된 지역: " +oder_page_city.getItemAtPosition(i), Toast.LENGTH_LONG).show();*/
         if(oder_page_city.getItemAtPosition(i).equals("서울시")){
             location.clear();
-            location.add("강남구");
+            location.add("성동구");
             location.add("강서구");
             location.add("강북구");
             location.add("강동구");
@@ -136,7 +136,7 @@ public class OderPage extends Fragment {
     @OnItemSelected(R.id.oder_page_location)
     public void onLocationSelected(View v, int i){
         selectLocation(i, "강서구");
-        selectLocation(i, "강남구");
+        selectLocation(i, "성동구");
         selectLocation(i, "강북구");
         selectLocation(i, "강동구");
         selectLocation(i, "수원시");
@@ -178,7 +178,7 @@ public class OderPage extends Fragment {
           list_store.setAdapter(FlowerStoreListadapter);
 
           /*네이버 지도 프래그먼트*/
-          MapFragment map = new MapFragment();
+          /*MapFragment map = new MapFragment();
           Bundle bundle = new Bundle();
           bundle.putParcelableArrayList("district", stores2);
           map.setArguments(bundle);
@@ -187,7 +187,7 @@ public class OderPage extends Fragment {
           fragmentTransaction.add(R.id.fragmentHere, map);
           fragmentTransaction.replace(R.id.fragmentHere, map);
           fragmentTransaction.commit();
-          Log.d("bundle", "bundle: " +bundle);
+          Log.d("bundle", "bundle: " +bundle);*/
         }
     }
 

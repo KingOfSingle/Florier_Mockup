@@ -27,16 +27,14 @@ public class Flower_shop_main extends AppCompatActivity {
         Log.d("jp","pos="+pos);
 
         if(pos==0) {
-            Flower_product grid_test1 = new Flower_product("www.naver.com", "진홍빛주말", "10000");
-            Flower_product grid_test2 = new Flower_product("www.naver.com", "기억", "40000");
-            Flower_product grid_test3 = new Flower_product("www.naver.com", "소리", "10000");
-            Flower_product grid_test4 = new Flower_product("www.naver.com", "다다", "10000");
-            Flower_product grid_test5 = new Flower_product("www.naver.com", "자자", "10000");
+            Flower_product grid_test1 = new Flower_product("0", "붉은노을", "25000");
+            Flower_product grid_test2 = new Flower_product("1", "몽몽몽목화", "25000");
+            Flower_product grid_test3 = new Flower_product("2", "나 혼자 장미", "10000");
+            Flower_product grid_test4 = new Flower_product("3", "안개꽃다발", "10000");
             flower_products.add(grid_test1);
             flower_products.add(grid_test2);
             flower_products.add(grid_test3);
             flower_products.add(grid_test4);
-            flower_products.add(grid_test5);
         } else if(pos==1){
             Flower_product grid_test1 = new Flower_product("www.naver.com", "진홍빛주말", "10000");
             flower_products.add(grid_test1);

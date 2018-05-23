@@ -39,12 +39,8 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="200dp"
+        android:background="@drawable/map_map"
         >
-        <TextView
-            android:id="@+id/oder_page_mapView"
-            android:text="맵표시"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <ListView

@@ -51,9 +51,18 @@ public class Flower_product_adapter extends BaseAdapter {
         }
         Flower_product item = (Flower_product) getItem(position);
         //   holder.store_flower_img.setBackground();
+        Integer type = Integer.parseInt(item.getFlower_img());
         holder.store_flower_name.setText(item.getFlower_name());
         holder.store_flower_price.setText(item.getFlower_price());
-
+        if(type==0){
+            holder.store_flower_img.setBackgroundResource(R.drawable.flower_b);
+        }else if(type==1){
+            holder.store_flower_img.setBackgroundResource(R.drawable.flower_b2);
+        }else if(type==2){
+            holder.store_flower_img.setBackgroundResource(R.drawable.flower_b3);
+        }else if(type==3){
+            holder.store_flower_img.setBackgroundResource(R.drawable.flower_b4);
+        }
         return view;
     }
 
