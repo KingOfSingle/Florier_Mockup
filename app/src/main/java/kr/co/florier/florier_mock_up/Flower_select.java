@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,10 +30,24 @@ public class Flower_select extends AppCompatActivity {
 
     @BindView(R.id.flower_list)
     GridView flower_list;
-    @BindView(R.id.select_list)
-    ListView select_list;
+    /*@BindView(R.id.select_list)
+    ListView select_list;*/
     @BindView(R.id.btn_ok)
     Button btn_ok;
+
+    @BindView(R.id.name1) TextView name1;
+    @BindView(R.id.count1) TextView count1;
+    @BindView(R.id.price1) TextView price1;
+    @BindView(R.id.name2) TextView name2;
+    @BindView(R.id.count2) TextView count2;
+    @BindView(R.id.price2) TextView price2;
+    @BindView(R.id.name3) TextView name3;
+    @BindView(R.id.count3) TextView count3;
+    @BindView(R.id.price3) TextView price3;
+    @BindView(R.id.name4) TextView name4;
+    @BindView(R.id.count4) TextView count4;
+    @BindView(R.id.price4) TextView price4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +55,11 @@ public class Flower_select extends AppCompatActivity {
         setContentView(R.layout.flower_select);
         ButterKnife.bind(this);
 
-        Flower flower1 = new Flower(0,0,"장미1",25000,"www.naver.com");
-        Flower flower2 = new Flower(1,0,"장미2",35000,"www.naver.com");
-        Flower flower3 = new Flower(2,0,"장미3",65000,"www.naver.com");
-        Flower flower4 = new Flower(3,0,"장미4",75000,"www.naver.com");
-        Flower flower5 = new Flower(4,0,"장미5",15000,"www.naver.com");
+        Flower flower1 = new Flower(0,0,"장미(분홍)",25000,"www.naver.com");
+        Flower flower2 = new Flower(1,0,"장미(주황)",35000,"www.naver.com");
+        Flower flower3 = new Flower(2,0,"장미(빨강)",65000,"www.naver.com");
+        Flower flower4 = new Flower(3,0,"장미(연분홍)",75000,"www.naver.com");
+        Flower flower5 = new Flower(4,0,"장미(백)",15000,"www.naver.com");
         Flower flower6 = new Flower(5,1,"수국",15000,"www.naver.com");
         Flower flower7 = new Flower(6,1,"카네이션",15000,"www.naver.com");
         Flower flower8 = new Flower(7,1,"작약",15000,"www.naver.com");
@@ -71,21 +86,52 @@ public class Flower_select extends AppCompatActivity {
         Log.d("flowerType", "flwoerType: " +flowerType);
         checkFlowerType(flowerType);
 
+
+        if(flowers2.size()==1){
+            name1.setText(flowers2.get(0).getFlower_name());
+            price1.setText(String.valueOf(flowers2.get(0).getFlower_price()));
+        }else if(flowers2.size()==2){
+            name1.setText(flowers2.get(0).getFlower_name());
+            name2.setText(flowers2.get(1).getFlower_name());
+            price1.setText(String.valueOf(flowers2.get(0).getFlower_price()));
+            price2.setText(String.valueOf(flowers2.get(1).getFlower_price()));
+        }else if(flowers2.size()==3){
+            name1.setText(flowers2.get(0).getFlower_name());
+            name2.setText(flowers2.get(1).getFlower_name());
+            name3.setText(flowers2.get(2).getFlower_name());
+            price1.setText(String.valueOf(flowers2.get(0).getFlower_price()));
+            price2.setText(String.valueOf(flowers2.get(1).getFlower_price()));
+            price3.setText(String.valueOf(flowers2.get(2).getFlower_price()));
+        }else {
+            name1.setText(flowers2.get(0).getFlower_name());
+            name2.setText(flowers2.get(1).getFlower_name());
+            name3.setText(flowers2.get(2).getFlower_name());
+            name4.setText(flowers2.get(3).getFlower_name());
+            price1.setText(String.valueOf(flowers2.get(0).getFlower_price()));
+            price2.setText(String.valueOf(flowers2.get(1).getFlower_price()));
+            price3.setText(String.valueOf(flowers2.get(2).getFlower_price()));
+            price4.setText(String.valueOf(flowers2.get(3).getFlower_price()));
+        }
     }
 
-    int count = 0;
+    int a1,a2,a3,a4 = 0;
     @OnItemClick(R.id.flower_list)
-    public void onItemClick(View v, int i){
-        count++;
+    public void onItemClick(View v, int i) {
         Flower item = flowers2.get(i);
-        Intent intent = new Intent(Flower_select.this, Flower_select_list_item.class);
-        intent.putExtra("flowerName", item.getFlower_name());
-        intent.putExtra("count", count);
-        intent.putExtra("flowerPrice", item.getFlower_price());
-        Flower_select_list_item flowerSelectListItem = new Flower_select_list_item(flowers2, Flower_select.this);
-        select_list.setAdapter(flowerSelectListItem);
+        if (item.getFlower_name().equals("장미(분홍)")) {
+            a1++;
+            count1.setText(Integer.toString(a1));
+        } else if (item.getFlower_name().equals("장미(주황)")) {
+            a2++;
+            count2.setText(Integer.toString(a2));
+        } else if (item.getFlower_name().equals("장미(빨강)")) {
+            a3++;
+            count3.setText(Integer.toString(a3));
+        } else if (item.getFlower_name().equals("장미(연분홍)")) {
+            a4++;
+            count4.setText(Integer.toString(a4));
+        }
     }
-
     @OnClick(R.id.btn_ok)
     public void clickOk(View view) {
         /*Intent intent = new Intent(Flower_select.this,MakeFlowerMenu.class);
