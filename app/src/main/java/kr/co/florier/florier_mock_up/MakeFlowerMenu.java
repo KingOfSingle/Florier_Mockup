@@ -181,12 +181,16 @@ public class MakeFlowerMenu extends AppCompatActivity {
     public void visibleGone(){
         if(a == 1){
             text_form.setVisibility(View.GONE);
+            list_form.setVisibility(View.VISIBLE);
         }else if(a == 2){
             text_mass.setVisibility(View.GONE);
+            list_mass.setVisibility(View.VISIBLE);
         }else if(a == 3) {
             text_line.setVisibility(View.GONE);
+            list_line.setVisibility(View.VISIBLE);
         }else if(a == 4){
             text_fill.setVisibility(View.GONE);
+            list_fill.setVisibility(View.VISIBLE);
         }
     }
 }

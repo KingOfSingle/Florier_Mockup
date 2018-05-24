@@ -80,7 +80,7 @@ public class OderPage extends Fragment {
         Store store1 = new Store(0,"데이데이플라워","서울시","강서구", 37.5558818, 126.8606436,"www.naver.com","0105040304","서울시 강서구 등촌3동");
         Store store2 = new Store(1,"밝은빛꽃","충청남도","보령시",36.3525227, 126.5987928, "www.naver.com","0105040304","충청남도 보령시 죽정동");
         Store store3 = new Store(2,"예그리나","서울시","강서구",37.5574591, 126.8558204, "www.naver.com","0105040304","서울시 강서구 염창동");
-        Store store4 = new Store(3,"스윗스멜링","서울시","강남구",37.4978372, 127.0419858, "www.naver.com","0105040304","서울시 강남구 역삼2동");
+        Store store4 = new Store(3,"한양플라워","서울시","강남구",37.4978372, 127.0419858, "www.naver.com","0105040304","서울시 성남구 한양대");
         Store store5 = new Store(4,"도봉꽃화원","서울시","강북구",37.6387389, 127.0244363, "www.naver.com","0105040304","서울시 강북구 등촌동");
         Store store6 = new Store(5,"오복꽃집","경기도","성남시", 37.4412417, 127.132513, "www.naver.com","0105040304","경기도 성남시 수정구");
         Store store7 = new Store(6,"아이엠플라워","경기도","수원시",37.3527521, 126.9890797, "www.naver.com","0105040304","경기도 수원시 권선구");
@@ -178,7 +178,7 @@ public class OderPage extends Fragment {
           list_store.setAdapter(FlowerStoreListadapter);
 
           /*네이버 지도 프래그먼트*/
-          MapFragment map = new MapFragment();
+          /*MapFragment map = new MapFragment();
           Bundle bundle = new Bundle();
           bundle.putParcelableArrayList("district", stores2);
           map.setArguments(bundle);
@@ -187,7 +187,7 @@ public class OderPage extends Fragment {
           fragmentTransaction.add(R.id.fragmentHere, map);
           fragmentTransaction.replace(R.id.fragmentHere, map);
           fragmentTransaction.commit();
-          Log.d("bundle", "bundle: " +bundle);
+          Log.d("bundle", "bundle: " +bundle);*/
         }
     }
 

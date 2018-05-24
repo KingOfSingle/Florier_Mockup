@@ -10,8 +10,8 @@
         <View
             android:id="@+id/store_flower_img"
             android:background="@mipmap/ic_launcher"
-            android:layout_width="130dp"
-            android:layout_height="150dp"/>
+            android:layout_width="400dp"
+            android:layout_height="300dp"/>
         <TextView
             android:id="@+id/store_flower_name"
             android:layout_width="100dp"

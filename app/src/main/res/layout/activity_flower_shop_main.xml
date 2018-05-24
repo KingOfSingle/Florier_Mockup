@@ -14,7 +14,7 @@
         android:id="@+id/top">
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="500dp"
             android:id="@+id/img_store"
             android:background="@drawable/flower_store"/>
         <LinearLayout
@@ -23,19 +23,19 @@
             android:orientation="vertical">
             <TextView
                 android:id="@+id/tx_store_name"
-                android:text="데일리 플라워"
+                android:text="한양플라워"
                 android:textSize="30dp"
                 android:layout_width="200dp"
                 android:layout_height="40dp" />
             <TextView
                 android:id="@+id/tx_store_address"
-                android:text="서울시 강서구 등촌동 102"
+                android:text="서울시 성남구 한양대"
                 android:layout_width="250dp"
                 android:textSize="20dp"
                 android:layout_height="30dp" />
             <TextView
                 android:id="@+id/tx_store_number"
-                android:text="02-4252-2565"
+                android:text="01050403042"
                 android:textSize="20dp"
                 android:layout_width="200dp"
                 android:layout_height="30dp" />
@@ -47,6 +47,7 @@
         android:id="@+id/grid_store"
         android:layout_below="@+id/top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
     </GridView>
 </RelativeLayout>

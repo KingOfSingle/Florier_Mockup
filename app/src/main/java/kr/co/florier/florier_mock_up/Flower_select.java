@@ -114,22 +114,56 @@ public class Flower_select extends AppCompatActivity {
         }
     }
 
-    int a1,a2,a3,a4 = 0;
+    int a1,a2,a3,a4,a5,a6,a7,a8,a9,a10 = 0;
     @OnItemClick(R.id.flower_list)
     public void onItemClick(View v, int i) {
         Flower item = flowers2.get(i);
         if (item.getFlower_id()==0) {
             a1++;
             count1.setText(Integer.toString(a1));
+            Log.d("ljy",a1+" =0");
         } else if (item.getFlower_id()==1) {
             a2++;
             count2.setText(Integer.toString(a2));
+            Log.d("ljy",a1+" =1");
         } else if (item.getFlower_id()==3) {
             a3++;
             count3.setText(Integer.toString(a3));
+            Log.d("ljy",a1+" =3");
         } else if (item.getFlower_id()==4) {
             a4++;
             count4.setText(Integer.toString(a4));
+            Log.d("ljy",a1+" =4");
+        }
+        else if (item.getFlower_id()==5) {
+            a5++;
+            count1.setText(Integer.toString(a5));
+            Log.d("ljy",a5+" =4");
+        }
+        else if (item.getFlower_id()==6) {
+            a6++;
+            count2.setText(Integer.toString(a6));
+            Log.d("ljy",a6+" =4");
+        }
+        else if (item.getFlower_id()==7) {
+            a7++;
+            count3.setText(Integer.toString(a7));
+            Log.d("ljy",a7+" =4");
+        }
+        else if (item.getFlower_id()==8) {
+            a8++;
+            count1.setText(Integer.toString(a8));
+            Log.d("ljy",a8+" =4");
+        }
+        else if (item.getFlower_id()==9) {
+            a9++;
+            count1.setText(Integer.toString(a4));
+            Log.d("ljy",a9+" =4");
+        }
+        else if (item.getFlower_id()==10) {
+            a10++;
+            count2.setText(Integer.toString(a4));
+            Log.d("ljy",a10+" =4");
         }
         Intent intent=getIntent();
         String name1 = intent.getStringExtra("name1");

@@ -9,14 +9,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="플라워"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
         />
 
     <RelativeLayout
         android:id="@+id/select_item"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true">
             <GridView
                 android:layout_width="match_parent"
@@ -30,49 +32,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="목록"
-        android:layout_below="@+id/select_item"/>
+        android:layout_below="@+id/select_item"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        />
 
     <LinearLayout
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_above="@id/btn_ok"
+        android:layout_marginBottom="100dp"
         >
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:stretchColumns="*">
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 >
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="#999"
                     android:gravity="center"
                     android:text="종류"
                     />
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#816"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
                     android:gravity="center"
                     android:text="송이"/>
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="#9076"
                     android:gravity="center"
                     android:text="가격"/>
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 >
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="#999"
                     android:gravity="center"
                     android:text="rank"
@@ -81,14 +86,15 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#816"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
                     android:gravity="center"
-                    android:text="rank"
+                    android:text="0"
+                    android:textColor="#df1c1c"
                     android:id="@+id/count1"/>
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="#9076"
                     android:gravity="center"
                     android:text="rank"
@@ -96,11 +102,11 @@
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 >
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="#999"
                     android:gravity="center"
                     android:text="rank"
@@ -108,14 +114,15 @@
                     />
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#816"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
                     android:gravity="center"
-                    android:text="rank"
+                    android:text="0"
+                    android:textColor="#df1c1c"
                     android:id="@+id/count2"/>
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="#9076"
                     android:gravity="center"
                     android:text="rank"
@@ -123,11 +130,11 @@
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 >
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="#999"
                     android:gravity="center"
                     android:text="rank"
@@ -135,14 +142,15 @@
                     />
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#816"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
                     android:gravity="center"
-                    android:text="rank"
+                    android:text="0"
+                    android:textColor="#df1c1c"
                     android:id="@+id/count3"/>
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="#9076"
                     android:gravity="center"
                     android:text="rank"
@@ -150,11 +158,11 @@
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 >
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="#999"
                     android:gravity="center"
                     android:text="rank"
@@ -162,14 +170,15 @@
                     />
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#816"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
                     android:gravity="center"
-                    android:text="rank"
+                    android:text="0"
+                    android:textColor="#df1c1c"
                     android:id="@+id/count4"/>
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="#9076"
                     android:gravity="center"
                     android:text="rank"
@@ -180,8 +189,8 @@
 
     <Button
         android:id="@+id/btn_ok"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="15dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
