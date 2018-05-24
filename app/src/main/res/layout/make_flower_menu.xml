@@ -19,6 +19,44 @@
             android:layout_marginTop="20dp">
 
             <LinearLayout
+            android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/mass_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/mass"
+                        android:alpha="0.6"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매스 플라워"
+                        android:textSize="25dp"
+                        android:textColor="#000000"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/text_mass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  많은 꽃잎이 모여서 하나의 덩어리를 이룬 꽃을 말한다."
+                    android:textColor="#eaafaf"
+                    android:textSize="17dp"/>
+                <ListView
+                    android:id="@+id/list_mass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:orientation="vertical"
@@ -56,46 +94,6 @@
                     android:layout_height="wrap_content"
                     />
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_margin="10dp"
-                >
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                    <Button
-                        android:id="@+id/mass_btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:background="@drawable/mass"
-                        android:alpha="0.6"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="매스 플라워"
-                        android:textSize="25dp"
-                        android:textColor="#000000"
-                        android:layout_centerInParent="true"/>
-                </RelativeLayout>
-                <TextView
-                    android:id="@+id/text_mass"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  많은 꽃잎이 모여서 하나의 덩어리를 이룬 꽃을 말한다."
-                    android:textColor="#eaafaf"
-                    android:textSize="17dp"/>
-                <ListView
-                    android:id="@+id/list_mass"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
-
-            </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout

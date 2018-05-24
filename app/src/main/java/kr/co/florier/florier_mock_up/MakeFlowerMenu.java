@@ -99,36 +99,81 @@ public class MakeFlowerMenu extends AppCompatActivity {
 
         if(requestCode==0){
             if(resultCode==RESULT_OK){
-                // 선택한 폼플라워 리스트
-                String name = data.getStringExtra("name");
-                Integer price = data.getIntExtra("price", 0);
-                Integer count = data.getIntExtra("count", 0);
+                // 선택한 매스플라워 리스트
+                String name1 = data.getStringExtra("name1");
+                Integer price1 = data.getIntExtra("price1", 0);
+                Integer count1 = data.getIntExtra("count1", 0);
+                String name2 = data.getStringExtra("name2");
+                Integer price2 = data.getIntExtra("price2", 0);
+                Integer count2 = data.getIntExtra("count2", 0);
+                String name3 = data.getStringExtra("name3");
+                Integer price3 = data.getIntExtra("price3", 0);
+                Integer count3 = data.getIntExtra("count3", 0);
+                String name4 = data.getStringExtra("name4");
+                Integer price4 = data.getIntExtra("price4", 0);
+                Integer count4 = data.getIntExtra("count4", 0);
 
-                Order_flower order_flower = new Order_flower(name,price,count);
-                items.add(order_flower);
-                list_form.setAdapter(orderListAdapter);
+                Order_flower order_flower1 = new Order_flower(name1,price1,count1);
+                Order_flower order_flower2 = new Order_flower(name2,price2,count2);
+                Order_flower order_flower3 = new Order_flower(name3,price3,count3);
+                Order_flower order_flower4 = new Order_flower(name4,price4,count4);
+                items.add(order_flower1);
+                items.add(order_flower2);
+                items.add(order_flower3);
+                items.add(order_flower4);
+                list_mass.setAdapter(orderListAdapter);
                 orderListAdapter.notifyDataSetChanged();
             }
         } else if(requestCode==1){
             if(resultCode==RESULT_OK){
-                // 선택한 메스플라워 리스트
-                String name = data.getStringExtra("name");
-                Integer price = data.getIntExtra("price", 0);
-                Integer count = data.getIntExtra("count", 0);
+                // 선택한 폼 플라워 리스트
+                String name1 = data.getStringExtra("name1");
+                Integer price1 = data.getIntExtra("price1", 0);
+                Integer count1 = data.getIntExtra("count1", 0);
+                String name2 = data.getStringExtra("name2");
+                Integer price2 = data.getIntExtra("price2", 0);
+                Integer count2 = data.getIntExtra("count2", 0);
+                String name3 = data.getStringExtra("name3");
+                Integer price3 = data.getIntExtra("price3", 0);
+                Integer count3 = data.getIntExtra("count3", 0);
+
+                Order_flower order_flower1 = new Order_flower(name1,price1,count1);
+                Order_flower order_flower2 = new Order_flower(name2,price2,count2);
+                Order_flower order_flower3 = new Order_flower(name3,price3,count3);
+                items.add(order_flower1);
+                items.add(order_flower2);
+                items.add(order_flower3);
+                list_form.setAdapter(orderListAdapter);
+                orderListAdapter.notifyDataSetChanged();
             }
         } else if(requestCode==2){
             if(resultCode==RESULT_OK){
                 // 선택한 라인플라워 리스트
-                String name = data.getStringExtra("name");
-                Integer price = data.getIntExtra("price", 0);
-                Integer count = data.getIntExtra("count", 0);
+                String name1 = data.getStringExtra("name1");
+                Integer price1 = data.getIntExtra("price1", 0);
+                Integer count1 = data.getIntExtra("count1", 0);
+
+                Order_flower order_flower = new Order_flower(name1,price1,count1);
+                items.add(order_flower);
+                list_line.setAdapter(orderListAdapter);
+                orderListAdapter.notifyDataSetChanged();
             }
         } else if(requestCode==0){
             if(resultCode==RESULT_OK){
                 // 선택한 필러플라워 리스트
-                String name = data.getStringExtra("name");
-                Integer price = data.getIntExtra("price", 0);
-                Integer count = data.getIntExtra("count", 0);
+                String name1 = data.getStringExtra("name1");
+                Integer price1 = data.getIntExtra("price1", 0);
+                Integer count1 = data.getIntExtra("count1", 0);
+                String name2 = data.getStringExtra("name2");
+                Integer price2 = data.getIntExtra("price2", 0);
+                Integer count2 = data.getIntExtra("count2", 0);
+                Order_flower order_flower1 = new Order_flower(name1,price1,count1);
+                Order_flower order_flower2 = new Order_flower(name2,price2,count2);
+
+                items.add(order_flower1);
+                items.add(order_flower2);
+                list_fill.setAdapter(orderListAdapter);
+                orderListAdapter.notifyDataSetChanged();
             }
         }
     }
