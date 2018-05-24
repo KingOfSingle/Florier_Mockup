@@ -1,5 +1,6 @@
 package kr.co.florier.florier_mock_up.adapter;
 
+import android.support.annotation.DrawableRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,6 +57,7 @@ public class FlowerStoreListAdapter extends BaseAdapter {
             holder = (FlowerStoreListAdapter.Holder)view.getTag();
         }
         Store item = (Store) getItem(position);
+        holder.flower_store_img.setBackgroundResource(R.drawable.store_main);
         holder.tx_flower_store_name.setText(item.getName());
         holder.tx_flower_store_phone.setText(item.getCall());
         holder.tx_flower_store_address.setText(item.getAddress());

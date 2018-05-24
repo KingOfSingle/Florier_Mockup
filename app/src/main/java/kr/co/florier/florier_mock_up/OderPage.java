@@ -177,7 +177,7 @@ public class OderPage extends Fragment {
           FlowerStoreListAdapter FlowerStoreListadapter = new FlowerStoreListAdapter(stores2);
           list_store.setAdapter(FlowerStoreListadapter);
 
-          /*네이버 지도 프래그먼트*//*
+          /*네이버 지도 프래그먼트*/
           MapFragment map = new MapFragment();
           Bundle bundle = new Bundle();
           bundle.putParcelableArrayList("district", stores2);
@@ -187,7 +187,7 @@ public class OderPage extends Fragment {
           fragmentTransaction.add(R.id.fragmentHere, map);
           fragmentTransaction.replace(R.id.fragmentHere, map);
           fragmentTransaction.commit();
-          Log.d("bundle", "bundle: " +bundle);*/
+          Log.d("bundle", "bundle: " +bundle);
         }
     }
 
