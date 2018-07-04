@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Order_flower {
     private String name;
-    private int price;
-    private int count;
+    private String price;
+    private String count;
 }

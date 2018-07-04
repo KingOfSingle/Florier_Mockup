@@ -19,8 +19,7 @@ import retrofit2.Response;*/
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.drawer)LinearLayout drawer;
-    @BindView(R.id.drawer_layout)DrawerLayout drawer_layout;
+    /*@BindView(R.id.drawer)LinearLayout drawer;*/
     TabLayout mTabLayout;
     ViewPager mViewPager;
 
@@ -52,10 +51,10 @@ public class MainActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(R.drawable.home, "HOME", new MakeFlowerMain());
+        adapter.addFragment(R.drawable.home, "HOME", new MakeFlowerIntro());
         adapter.addFragment(R.drawable.locate, "SHOP", new OderPage());
-        /*adapter.addFragment(R.drawable.ic_launcher_background, "Page3", new OderPage());*/
-        /*adapter.addFragment(R.drawable.ic_launcher_background, "Page4", new FlowerStore());*/
+        adapter.addFragment(R.drawable.ic_launcher_background, "COMMUNITY", new OderPage());
+        adapter.addFragment(R.drawable.ic_launcher_background, "ETC", new OderPage());
         mViewPager.setAdapter(adapter);
 
         mTabLayout.setupWithViewPager(mViewPager);

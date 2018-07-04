@@ -12,11 +12,16 @@ import java.util.ArrayList;
 
 import kr.co.florier.florier_mock_up.R;
 import kr.co.florier.florier_mock_up.bean.Order_flower;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * Created by LJY on 2018-05-23.
  */
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class OrderListAdapter extends BaseAdapter {
     ArrayList<Order_flower> items = new ArrayList<>();
 
@@ -50,7 +55,7 @@ public class OrderListAdapter extends BaseAdapter {
         }
         final Order_flower item = (Order_flower) getItem(position);
         holder.flower_name.setText(item.getName());
-        holder.flower_count.setText(item.getCount());
+        holder.flower_count.setText(String.valueOf(item.getCount()));
         holder.flower_price.setText(item.getPrice());
         return view;
     }
