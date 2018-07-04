@@ -19,7 +19,6 @@ import retrofit2.Response;*/
 
 public class MainActivity extends AppCompatActivity {
 
-    /*@BindView(R.id.drawer)LinearLayout drawer;*/
     TabLayout mTabLayout;
     ViewPager mViewPager;
 
