@@ -20,7 +20,7 @@
 
             <LinearLayout
             android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 android:orientation="vertical"
                 android:layout_weight="1"
                 android:layout_margin="10dp"
@@ -31,7 +31,7 @@
                     <Button
                         android:id="@+id/mass_btn"
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_height="170dp"
                         android:background="@drawable/mass"
                         android:alpha="0.6"/>
                     <TextView
@@ -42,23 +42,27 @@
                         android:textColor="#000000"
                         android:layout_centerInParent="true"/>
                 </RelativeLayout>
-                <TextView
-                    android:id="@+id/text_mass"
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  많은 꽃잎이 모여서 하나의 덩어리를 이룬 꽃을 말한다."
-                    android:textColor="#eaafaf"
-                    android:textSize="17dp"/>
-                <ListView
-                    android:id="@+id/list_mass"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
-
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/text_mass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  많은 꽃잎이 모여서 하나의 덩어리를 이룬 꽃을 말한다."
+                        android:textColor="#eaafaf"
+                        android:textSize="17dp"/>
+                    <ListView
+                        android:id="@+id/list_mass"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 android:orientation="vertical"
                 android:layout_weight="1"
                 android:layout_margin="10dp"
@@ -69,7 +73,7 @@
                     <Button
                         android:id="@+id/form_btn"
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_height="170dp"
                         android:background="@drawable/form"
                         android:alpha="0.6" />
                     <TextView
@@ -80,6 +84,9 @@
                         android:textColor="#000000"
                         android:layout_centerInParent="true"/>
                 </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
                 <TextView
                     android:id="@+id/text_form"
                     android:layout_width="wrap_content"
@@ -90,9 +97,11 @@
 
                 <ListView
                     android:id="@+id/list_form"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     />
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
 
@@ -103,7 +112,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 android:orientation="vertical"
                 android:layout_weight="1"
                 android:layout_margin="10dp"
@@ -115,7 +124,7 @@
                     <Button
                         android:id="@+id/line_btn"
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_height="170dp"
                         android:background="@drawable/line"
                         android:alpha="0.6"/>
                     <TextView
@@ -126,24 +135,28 @@
                         android:textColor="#000000"
                         android:layout_centerInParent="true"/>
                 </RelativeLayout>
-                <TextView
-                    android:id="@+id/text_line"
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  꽃의 줄기가 곧고 키가 커서 선의 형태를 나타낼 수 있는 꽃."
-                    android:textColor="#eaafaf"
-                    android:textSize="17dp"/>
-                <ListView
-                    android:id="@+id/list_line"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
-
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/text_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  꽃의 줄기가 곧고 키가 커서 선의 형태를 나타낼 수 있는 꽃."
+                        android:textColor="#eaafaf"
+                        android:textSize="17dp"/>
+                    <ListView
+                        android:id="@+id/list_line"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 android:orientation="vertical"
                 android:layout_weight="1"
                 android:layout_margin="10dp">
@@ -153,7 +166,7 @@
                     <Button
                         android:id="@+id/fill_btn"
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_height="170dp"
                         android:background="@drawable/fill"
                         android:alpha="0.6"/>
                     <TextView
@@ -164,26 +177,30 @@
                         android:textColor="#000000"
                         android:layout_centerInParent="true"/>
                 </RelativeLayout>
-                <TextView
-                    android:id="@+id/text_fill"
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="하나의 줄기에 자잔한 꽃들이 밀집되어 있어서 빈 공간을 메우는데 사용할 수 있다."
-                    android:textColor="#eaafaf"
-                    android:textSize="17dp"/>
-                <ListView
-                    android:id="@+id/list_fill"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
-
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/text_fill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="하나의 줄기에 자잔한 꽃들이 밀집되어 있어서 빈 공간을 메우는데 사용할 수 있다."
+                        android:textColor="#eaafaf"
+                        android:textSize="17dp"/>
+                    <ListView
+                        android:id="@+id/list_fill"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/btn_order"
