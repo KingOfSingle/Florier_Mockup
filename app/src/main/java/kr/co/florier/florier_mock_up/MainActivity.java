@@ -2,14 +2,9 @@ package kr.co.florier.florier_mock_up;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import kr.co.florier.florier_mock_up.adapter.ViewPagerAdapter;
@@ -51,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(R.drawable.home, "HOME", new MakeFlowerIntro());
-        adapter.addFragment(R.drawable.locate, "SHOP", new OderPage());
-        adapter.addFragment(R.drawable.ic_launcher_background, "COMMUNITY", new OderPage());
-        adapter.addFragment(R.drawable.ic_launcher_background, "ETC", new OderPage());
+        adapter.addFragment(R.drawable.locate, "SHOP", new ShopPage());
+        adapter.addFragment(R.drawable.ic_launcher_background, "COMMUNITY", new ShopPage());
+        adapter.addFragment(R.drawable.ic_launcher_background, "ETC", new ShopPage());
         mViewPager.setAdapter(adapter);
 
         mTabLayout.setupWithViewPager(mViewPager);
