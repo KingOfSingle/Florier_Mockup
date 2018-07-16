@@ -24,7 +24,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnItemClick;
 import butterknife.OnItemSelected;
-import kr.co.florier.florier_mock_up.adapter.FlowerStoreListAdapter;
 import kr.co.florier.florier_mock_up.bean.Store;
 import kr.co.florier.florier_mock_up.map.MapFragment;
 
@@ -95,9 +94,6 @@ public class OderPage extends Fragment {
         stores.add(store7);
         stores.add(store8);
         stores.add(store9);
-
-        FlowerStoreListAdapter FlowerStoreListadapter = new FlowerStoreListAdapter(stores);
-        list_store.setAdapter(FlowerStoreListadapter);
 
         return rootview;
     }
@@ -174,8 +170,6 @@ public class OderPage extends Fragment {
           /*Intent intent = new Intent(getActivity(), Main2Activity.class);
           startActivity(intent);*/
 
-          FlowerStoreListAdapter FlowerStoreListadapter = new FlowerStoreListAdapter(stores2);
-          list_store.setAdapter(FlowerStoreListadapter);
 
           /*네이버 지도 프래그먼트*/
           MapFragment map = new MapFragment();
@@ -190,15 +184,4 @@ public class OderPage extends Fragment {
           Log.d("bundle", "bundle: " +bundle);
         }
     }
-
-    @OnItemClick(R.id.list_store)
-    public void onitmeclicklisner(View v, int i){
-        Log.d("jp","클릭2");
-        Intent intent = new Intent(getActivity(),Flower_shop_main.class);
-        Store item = stores.get(i);
-        intent.putExtra("pos",item.getFlower_store_id());
-        startActivity(intent);
-    }
-
-
 }
