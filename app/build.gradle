@@ -40,5 +40,4 @@ dependencies {
     provided 'org.glassfish:javax.annotation:10.0-b28'
     //naverMap
     compile 'com.naver.maps.open:naver-map-api:2.1.2@aar'
-
 }
